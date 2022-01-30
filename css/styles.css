@@ -94,11 +94,14 @@ img {
 .nav-item-header {
   margin-left: 50px;
 }
+
 .nav-item-header:first-child {
   margin-left: 0;
 }
 
 .nav-list-header .link {
+  position: relative;
+
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -110,6 +113,8 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-list-header.link:last-child {
   margin-right: 0;
@@ -136,6 +141,8 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auto-nav .auto-link:hover,
@@ -143,17 +150,36 @@ img {
   color: var(--hover-button-color);
 }
 
-.icon-header {
-  margin-right: 10px;
-  fill: currentColor;
-}
 
 .icon-header {
   margin-right: 10px;
+
+    fill: currentColor;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 }
 
 .icon-header:hover {
   fill: var(--hover-button-color);
+}
+
+.link-current {
+  color: var(--hover-button-color);
+}
+
+.link-current::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--hover-button-color);
+  border-radius: 2px;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Конец общего header */
@@ -291,6 +317,8 @@ img {
 
 .social-icon-community {
   fill: var(--primary-icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .community-link {
@@ -300,13 +328,21 @@ img {
   border-radius: 50%;
   width: 100%;
   height: 100%;
+
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .community-link:hover .social-icon-community,
 .community-link:focus .social-icon-community {
   fill: var(--primary-white-color);
+}
+
+.community-link:hover,
+.community-link:focus {
   background-color: var(--hover-button-color);
 }
+
 
 /* Бар Студио */
 .section {
@@ -376,6 +412,8 @@ img {
   justify-content: center;
   border: 1px solid var(--primary-icon-color);
   border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
 .client-link:hover,
@@ -389,7 +427,7 @@ img {
   margin-right: 30px;
   width: 170px;
   height: 92px;
-  /* border: 1px solid var(--primary-icon-color); */
+  
 }
 
 .client:last-child {
@@ -399,6 +437,7 @@ img {
 .icon-client {
   /* margin: 16px 32px; */
   fill: var(--primary-icon-color);
+  transition: fill 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
 .client-link:hover .icon-client,
@@ -406,9 +445,9 @@ img {
   fill: var(--hover-button-color);
 }
 
-.client:hover {
+/* .client:hover {
   border-color: var(--hover-button-color);
-}
+} */
 
 /* Main Портфолио */
 /* Кнопки Портфолио */
@@ -438,6 +477,9 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: color 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: box-shadow 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
 .buttons .button:hover,
@@ -472,6 +514,7 @@ img {
 
 .sample-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
 .sample-link:hover,
@@ -540,6 +583,7 @@ img {
   line-height: 1.7;
   letter-spacing: 0.03em;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
 .footer-item {
@@ -559,6 +603,8 @@ img {
   line-height: 1.7;
   letter-spacing: 0.03em;
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4,0,0.2,1);
 }
 .address:hover,
 .address:focus .footer-link:focus,
@@ -600,10 +646,6 @@ img {
   fill: var(--primary-white-color);
 }
 
-.community-link:hover,
-.community-link:focus {
-  background-color: var(--hover-button-color);
-}
 
 .social-container {
   margin-left: 70px;
