@@ -10,6 +10,7 @@
   --primary-border-color: #eeeeee;
   --primary-white-color-10: rgba(255, 255, 255, 0.1);
   --primary-icon-color: #afb1b8;
+  --bgc-textbox: rgba(47, 48, 58, 0.8);
 }
 * {
   box-sizing: border-box;
@@ -150,14 +151,12 @@ img {
   color: var(--hover-button-color);
 }
 
-
 .icon-header {
   margin-right: 10px;
 
-    fill: currentColor;
+  fill: currentColor;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 }
 
 .icon-header:hover {
@@ -276,11 +275,36 @@ img {
 }
 
 .list-pictures {
+  position: relative;
   margin-left: 30px;
 }
 
 .list-pictures:first-child {
   margin-left: 0;
+}
+
+.text-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  padding-left: 83px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-right: 82px;
+
+  color: var(--primary-white-color);
+  background-color: var(--bgc-textbox);
+}
+
+.undertext {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .community {
@@ -318,7 +342,6 @@ img {
 .social-icon-community {
   fill: var(--primary-icon-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
 }
 
 .community-link {
@@ -329,8 +352,7 @@ img {
   width: 100%;
   height: 100%;
 
-   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .community-link:hover .social-icon-community,
@@ -342,7 +364,6 @@ img {
 .community-link:focus {
   background-color: var(--hover-button-color);
 }
-
 
 /* Бар Студио */
 .section {
@@ -413,7 +434,7 @@ img {
   border: 1px solid var(--primary-icon-color);
   border-radius: 4px;
 
-  transition: border-color 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -427,7 +448,6 @@ img {
   margin-right: 30px;
   width: 170px;
   height: 92px;
-  
 }
 
 .client:last-child {
@@ -437,7 +457,7 @@ img {
 .icon-client {
   /* margin: 16px 32px; */
   fill: var(--primary-icon-color);
-  transition: fill 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover .icon-client,
@@ -477,9 +497,9 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
   border: none;
-  transition: background-color 250ms cubic-bezier(0.4,0,0.2,1);
-  transition: color 250ms cubic-bezier(0.4,0,0.2,1);
-  transition: box-shadow 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons .button:hover,
@@ -514,7 +534,7 @@ img {
 
 .sample-link {
   display: block;
-  transition: box-shadow 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sample-link:hover,
@@ -583,7 +603,7 @@ img {
   line-height: 1.7;
   letter-spacing: 0.03em;
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-item {
@@ -604,7 +624,7 @@ img {
   letter-spacing: 0.03em;
   text-decoration: none;
 
-  transition: color 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address:hover,
 .address:focus .footer-link:focus,
@@ -645,7 +665,6 @@ img {
 .social-icon {
   fill: var(--primary-white-color);
 }
-
 
 .social-container {
   margin-left: 70px;
